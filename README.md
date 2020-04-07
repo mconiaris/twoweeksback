@@ -2,6 +2,8 @@
 
 How to install bootstrap 4.3 on a Rails 6 app using Webpack: https://medium.com/@guilhermepejon/how-to-install-bootstrap-4-3-in-a-rails-6-app-using-webpack-9eae7a6e2832
 
+Rails Model Tutorial: https://www.timdisab.com/ruby-rails-models/
+
 Webpacker Documentation: https://github.com/rails/webpacker
 
 # README
