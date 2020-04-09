@@ -5,7 +5,9 @@ class StoriesController < ApplicationController
 	end
 
 	def create
-		render plain: params[:story].inspect
-		# render plain: params[:story][:title]
+		@story = Story.new(params[:story])
+
+		@story.save
+		redirect_to @story
 	end
 end
