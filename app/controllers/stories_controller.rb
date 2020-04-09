@@ -5,6 +5,6 @@ class StoriesController < ApplicationController
 	end
 
 	def create
-		
+		render plain: params[:story].inspect
 	end
 end
