@@ -8,13 +8,13 @@
     <th>Date</th>
   </tr>
  
-  <% @articles.each do |article| %>
+  <% @stories.each do |story| %>
     <tr>
-      <td><%= article.title %></td>
-      <td><%= article.blurb %></td>
-      <td><%= article.link %></td>
-      <td><%= article.date %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= story.title %></td>
+      <td><%= story.blurb %></td>
+      <td><%= story.link %></td>
+      <td><%= story.date %></td>
+      <td><%= link_to 'Show', story_path(story) %></td>
     </tr>
   <% end %>
 </table>
