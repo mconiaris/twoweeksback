@@ -5,6 +5,10 @@ class StoriesController < ApplicationController
 	# actions in each controller in the following order: 
 	# index, show, new, edit, create, update and destroy. 
 
+	def index
+		@articles = Article.all
+	end
+
 	def show
 		@story = Story.find(params[:id])
 	end
