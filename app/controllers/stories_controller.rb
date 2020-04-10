@@ -5,9 +5,15 @@ class StoriesController < ApplicationController
 	# actions in each controller in the following order: 
 	# index, show, new, edit, create, update and destroy. 
 
+	def show
+		@story = Story.find(params[:id])
+	end
+
+
 	def new
 		
 	end
+
 
 	def create
 		@story = Story.new(story_params)
