@@ -6,7 +6,7 @@ class StoriesController < ApplicationController
 	# index, show, new, edit, create, update and destroy. 
 
 	def index
-		@articles = Article.all
+		@stories = Story.all
 	end
 
 	def show
