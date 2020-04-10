@@ -5,15 +5,15 @@ class StoriesController < ApplicationController
 	end
 
 	def create
-		@story = Story.new(article_params)
+		@story = Story.new(story_params)
 
 		@story.save
 		redirect_to @story
 	end
 
 	private
-		def article_params
-			params.require(:article).permit(:title, :blurb, :date, :link)
+		def story_params
+			params.require(:story).permit(:title, :blurb, :link, :date)
 		end
 
 end
