@@ -15,15 +15,18 @@ class StoriesController < ApplicationController
 
 
 	def new
-		
+		@story = Story.new
 	end
 
 
 	def create
 		@story = Story.new(story_params)
 
-		@story.save
-		redirect_to @story
+		if @story.save
+			redirect_to @story
+		else
+			render 'new'
+		end
 	end
 
 	private
