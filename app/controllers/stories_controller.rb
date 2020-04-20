@@ -18,8 +18,8 @@ class StoriesController < ApplicationController
 		@story = Story.new
 	end
 
-	def create
-		
+	def edit
+		@story = Story.find(params[:id])
 	end
 
 
