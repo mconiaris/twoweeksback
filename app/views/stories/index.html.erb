@@ -17,6 +17,7 @@
       <td><%= story.link %></td>
       <td><%= story.date %></td>
       <td><%= link_to 'Show', story_path(story) %></td>
+      <td><%= link_to 'Edit', edit_story_path(story) %></td>
     </tr>
   <% end %>
 </table>
