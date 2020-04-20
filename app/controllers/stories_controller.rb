@@ -40,7 +40,7 @@ class StoriesController < ApplicationController
 			redirect_to @story
 		else
 			render 'edit'
-			endx
+		end
 	end
 
 	private
