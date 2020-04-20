@@ -18,6 +18,10 @@ class StoriesController < ApplicationController
 		@story = Story.new
 	end
 
+	def create
+		
+	end
+
 
 	def create
 		@story = Story.new(story_params)
