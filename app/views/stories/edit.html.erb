@@ -1,45 +1,5 @@
 <h1>Edit Article</h1>
 
-<%= form_with(model: @story, local: true) do |form| %>
-
-	<% if @story.errors.any? %>
-		<div id="error_explanation">
-			<h2>
-				<%= pluralize(@story.errors.count, "error") %>
-					prohibited this article from being saved:
-			</h2>
-			<ul>
-				<% @story.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
-
-	<p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
- 
-  <p>
-    <%= form.label :blurb %><br>
-    <%= form.text_area :blurb %>
-  </p>
-
-  <p>
-    <%= form.label :link %><br>
-    <%= form.text_area :link %>
-  </p>
-
-  <p>
-    <%= form.label :date %><br>
-    <%= form.text_area :date %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
-
-<% end %>
+<%= render 'form' %>
 
 <%= link_to "Back", stories_path %>
