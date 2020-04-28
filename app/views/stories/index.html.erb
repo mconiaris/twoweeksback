@@ -1,26 +1,15 @@
 <h1>Listing Stories</h1>
 
 <%= link_to 'New story', new_story_path %>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Blurb</th>
-    <th>Link</th>
-    <th>Date</th>
-  </tr>
  
-  <% @stories.each do |story| %>
-    <tr>
-      <td><%= story.title %></td>
-      <td><%= story.blurb %></td>
-      <td><%= story.link %></td>
-      <td><%= story.date %></td>
-      <td><%= link_to 'Show', story_path(story) %></td>
-      <td><%= link_to 'Edit', edit_story_path(story) %></td>
-      <td><%= link_to 'Destroy', story_path(story),
-        method: :delete,
-        data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+<% @stories.each do |story| %>
+
+  <h2><%= story.title %></h2>
+  <p><%= story.blurb %></p>
+  <p><%= story.link %></p>
+  <p><%= story.date %></p>
+  <p><%= link_to 'Show', story_path(story) %> | 
+        <%= link_to 'Edit', edit_story_path(story) %> | <%= link_to 'Destroy', story_path(story),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></p>
+<% end %>
