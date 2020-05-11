@@ -1,4 +1,6 @@
 class StoriesController < ApplicationController
+	http_basic_authenticate_with name: "admin", password: "1234",
+		except: [:index, :show]
 
 
 	# A frequent practice is to place the standard CRUD 
