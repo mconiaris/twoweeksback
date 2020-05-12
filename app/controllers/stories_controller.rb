@@ -1,4 +1,5 @@
 class StoriesController < ApplicationController
+	# TODO: Capture Passwords in Variable
 	http_basic_authenticate_with name: "admin", password: "1234",
 		except: [:index, :show]
 
